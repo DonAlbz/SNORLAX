@@ -59,7 +59,8 @@ h3 {
 
 .section-etichetta {
     display: inline-block;
-    font-size: 0.65rem;
+    font-size: 1rem;
+    font-family: "italic", serif;
     letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--ice-strong);
@@ -131,14 +132,13 @@ h3 {
 /* Navbar */
 
 #navbar {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
     z-index: 100;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 1.2rem 5%;
     background: rgba(244, 250, 253, 0.92);
     backdrop-filter: blur(16px);
@@ -146,22 +146,27 @@ h3 {
 }
 
 .logo {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Italic', serif;
     font-size: 1.3rem;
     font-weight: 300;
     letter-spacing: 0.12em;
-    color: var(--text-dark);
-}
-
-.logo span {
-    color: var(--ice-strong);
-    font-style: italic;
+    color: var(--ice-deep);
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.3rem;
 }
 
 .menu {
     display: flex;
+    flex: 1;
     align-items: center;
+    justify-content: center;
     gap: 2.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .menu a {
@@ -178,11 +183,16 @@ h3 {
 }
 
 .login {
+    display: flex;
+    flex: 0;
     padding: 0.5rem 1.2rem;
     border: 1px solid rgba(74, 155, 191, 0.4);
     border-radius: 3px;
     color: var(--ice-strong) !important;
     transition: all 0.2s !important;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5em;
 }
 
 .login:hover {
@@ -247,4 +257,31 @@ footer {
     font-size: 0.7rem;
     color: rgba(200, 220, 240, 0.3);
     letter-spacing: 0.1em;
+}
+
+/* INTESTAZIONE*/
+
+.intestazione {
+    padding: 10rem 5% 5rem;
+    background: linear-gradient(135deg, #b8d9ee 0%, #cfe8f5 40%, #e8f6fd 100%);
+    text-align: center;
+}
+
+.intestazione h1 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    color: var(--text-dark);
+    line-height: 1;
+}
+
+.intestazione h1 em {
+    color: var(--ice-strong);
+    font-style: italic;
+}
+
+.intestazione p {
+    font-size: 1rem;
+    color: var(--text-mid);
+    max-width: 480px;
+    margin: 1.5rem auto 0;
+    line-height: 1.8;
 }
