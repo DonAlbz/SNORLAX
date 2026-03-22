@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 580" width="300" height="580">
+  <defs>
+    <radialGradient id="bg-glow" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#0d2a4a"/>
+      <stop offset="100%" stop-color="#060e1c"/>
+    </radialGradient>
+    <linearGradient id="bar1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4ab8f0"/>
+      <stop offset="100%" stop-color="#2a7aaa"/>
+    </linearGradient>
+    <linearGradient id="bar2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7dd4f0"/>
+      <stop offset="100%" stop-color="#4ab8f0"/>
+    </linearGradient>
+    <linearGradient id="bar3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2a5a8a"/>
+      <stop offset="100%" stop-color="#4ab8f0"/>
+    </linearGradient>
+    <linearGradient id="ring-grad" cx="50%" cy="50%" r="50%" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4ab8f0"/>
+      <stop offset="100%" stop-color="#0a4a8a"/>
+    </linearGradient>
+    <clipPath id="screen-clip">
+      <rect x="18" y="18" width="264" height="544" rx="36"/>
+    </clipPath>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#4ab8f0" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- ombra telefono -->
+  <rect x="18" y="18" width="264" height="544" rx="40" fill="#4ab8f0" opacity="0.08" filter="url(#shadow)"/>
+
+  <!-- corpo telefono -->
+  <rect x="8" y="8" width="284" height="564" rx="42" fill="#0a1520" stroke="#1e3a5a" stroke-width="1.5"/>
+
+  <!-- schermo -->
+  <rect x="18" y="18" width="264" height="544" rx="36" fill="url(#bg-glow)" clip-path="url(#screen-clip)"/>
+
+  <!-- notch / dynamic island -->
+  <rect x="110" y="26" width="80" height="22" rx="11" fill="#060e1c"/>
+
+  <!-- STATUS BAR -->
+  <text x="32" y="52" font-family="sans-serif" font-size="10" fill="rgba(180,220,240,0.6)">22:14</text>
+  <text x="240" y="52" font-family="sans-serif" font-size="10" fill="rgba(180,220,240,0.6)" text-anchor="end">●●● 100%</text>
+
+  <!-- HEADER -->
+  <text x="32" y="82" font-family="Georgia, serif" font-size="11" fill="rgba(100,180,230,0.6)" letter-spacing="2">SNORLAX</text>
+  <text x="32" y="102" font-family="Georgia, serif" font-size="17" font-weight="300" fill="rgba(220,240,255,0.95)">Buonanotte, Elisa</text>
+
+  <!-- PUNTEGGIO SONNO - cerchio -->
+  <circle cx="150" cy="185" r="58" fill="none" stroke="rgba(74,184,240,0.1)" stroke-width="10"/>
+  <!-- arco progresso ~78% -->
+  <circle cx="150" cy="185" r="58" fill="none" stroke="url(#bar1)" stroke-width="10"
+    stroke-dasharray="284" stroke-dashoffset="62"
+    stroke-linecap="round" transform="rotate(-90 150 185)"/>
+  <text x="150" y="178" text-anchor="middle" font-family="Georgia, serif" font-size="28" font-weight="300" fill="rgba(220,240,255,0.95)">78</text>
+  <text x="150" y="196" text-anchor="middle" font-family="sans-serif" font-size="9" fill="rgba(100,180,230,0.7)" letter-spacing="1">PUNTEGGIO</text>
+
+  <!-- MINI STATS ROW -->
+  <rect x="28" y="258" width="72" height="52" rx="10" fill="rgba(74,184,240,0.07)" stroke="rgba(74,184,240,0.15)" stroke-width="0.8"/>
+  <text x="64" y="276" text-anchor="middle" font-family="sans-serif" font-size="8" fill="rgba(100,180,230,0.6)">DURATA</text>
+  <text x="64" y="294" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="rgba(220,240,255,0.9)">7h 22m</text>
+  <text x="64" y="306" text-anchor="middle" font-family="sans-serif" font-size="7" fill="rgba(74,184,240,0.5)">↑ +14m</text>
+
+  <rect x="114" y="258" width="72" height="52" rx="10" fill="rgba(74,184,240,0.07)" stroke="rgba(74,184,240,0.15)" stroke-width="0.8"/>
+  <text x="150" y="276" text-anchor="middle" font-family="sans-serif" font-size="8" fill="rgba(100,180,230,0.6)">BPM</text>
+  <text x="150" y="294" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="rgba(220,240,255,0.9)">58 bpm</text>
+  <text x="150" y="306" text-anchor="middle" font-family="sans-serif" font-size="7" fill="rgba(74,184,240,0.5)">ottimale</text>
+
+  <rect x="200" y="258" width="72" height="52" rx="10" fill="rgba(74,184,240,0.07)" stroke="rgba(74,184,240,0.15)" stroke-width="0.8"/>
+  <text x="236" y="276" text-anchor="middle" font-family="sans-serif" font-size="8" fill="rgba(100,180,230,0.6)">REM</text>
+  <text x="236" y="294" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="rgba(220,240,255,0.9)">42%</text>
+  <text x="236" y="306" text-anchor="middle" font-family="sans-serif" font-size="7" fill="rgba(74,184,240,0.5)">↑ ottimo</text>
+
+  <!-- FASI DEL SONNO -->
+  <text x="32" y="336" font-family="sans-serif" font-size="9" fill="rgba(100,180,230,0.6)" letter-spacing="1">FASI DEL SONNO</text>
+
+  <!-- barre fasi -->
+  <text x="32" y="356" font-family="sans-serif" font-size="8" fill="rgba(150,200,230,0.5)">Sveglio</text>
+  <rect x="80" y="346" width="170" height="7" rx="3" fill="rgba(255,255,255,0.04)"/>
+  <rect x="80" y="346" width="14" height="7" rx="3" fill="url(#bar3)"/>
+
+  <text x="32" y="374" font-family="sans-serif" font-size="8" fill="rgba(150,200,230,0.5)">Leggero</text>
+  <rect x="80" y="364" width="170" height="7" rx="3" fill="rgba(255,255,255,0.04)"/>
+  <rect x="80" y="364" width="85" height="7" rx="3" fill="url(#bar2)" opacity="0.7"/>
+
+  <text x="32" y="392" font-family="sans-serif" font-size="8" fill="rgba(150,200,230,0.5)">Profondo</text>
+  <rect x="80" y="382" width="170" height="7" rx="3" fill="rgba(255,255,255,0.04)"/>
+  <rect x="80" y="382" width="51" height="7" rx="3" fill="url(#bar1)" opacity="0.8"/>
+
+  <text x="32" y="410" font-family="sans-serif" font-size="8" fill="rgba(150,200,230,0.5)">REM</text>
+  <rect x="80" y="400" width="170" height="7" rx="3" fill="rgba(255,255,255,0.04)"/>
+  <rect x="80" y="400" width="71" height="7" rx="3" fill="url(#bar1)"/>
+
+  <!-- SOGNO RILEVATO -->
+  <rect x="28" y="428" width="244" height="60" rx="12" fill="rgba(74,184,240,0.06)" stroke="rgba(74,184,240,0.2)" stroke-width="0.8"/>
+  <circle cx="52" cy="458" r="14" fill="rgba(74,184,240,0.1)" stroke="rgba(74,184,240,0.25)" stroke-width="0.8"/>
+  <text x="52" y="462" text-anchor="middle" font-family="sans-serif" font-size="12" fill="rgba(74,184,240,0.8)">☽</text>
+  <text x="74" y="449" font-family="sans-serif" font-size="8" fill="rgba(100,180,230,0.6)" letter-spacing="0.5">SOGNO RILEVATO — 03:42</text>
+  <text x="74" y="463" font-family="Georgia, serif" font-size="10" font-style="italic" fill="rgba(200,235,250,0.8)">Attività onirica intensa</text>
+  <text x="74" y="477" font-family="sans-serif" font-size="8" fill="rgba(100,180,230,0.5)">Fase REM · durata 22 min</text>
+
+  <!-- BOTTOM NAV -->
+  <rect x="18" y="510" width="264" height="52" fill="rgba(6,14,28,0.95)" rx="0"/>
+  <rect x="18" y="510" width="264" height="1" fill="rgba(74,184,240,0.1)"/>
+
+  <text x="64" y="542" text-anchor="middle" font-family="sans-serif" font-size="8" fill="rgba(74,184,240,0.9)">⌂ Home</text>
+  <text x="118" y="542" text-anchor="middle" font-family="sans-serif" font-size="8" fill="rgba(100,180,230,0.4)">📊 Dati</text>
+  <text x="182" y="542" text-anchor="middle" font-family="sans-serif" font-size="8" fill="rgba(100,180,230,0.4)">☽ Sogni</text>
+  <text x="236" y="542" text-anchor="middle" font-family="sans-serif" font-size="8" fill="rgba(100,180,230,0.4)">⚙ Profilo</text>
+
+  <!-- bordi telefono rifinitura -->
+  <rect x="8" y="8" width="284" height="564" rx="42" fill="none" stroke="rgba(74,184,240,0.12)" stroke-width="1"/>
+
+  <!-- tasto volume sx -->
+  <rect x="4" y="140" width="4" height="32" rx="2" fill="#0a1520" stroke="#1e3a5a" stroke-width="0.8"/>
+  <rect x="4" y="182" width="4" height="32" rx="2" fill="#0a1520" stroke="#1e3a5a" stroke-width="0.8"/>
+  <!-- tasto power dx -->
+  <rect x="292" y="160" width="4" height="48" rx="2" fill="#0a1520" stroke="#1e3a5a" stroke-width="0.8"/>
+</svg>

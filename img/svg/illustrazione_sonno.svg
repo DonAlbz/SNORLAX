@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="500" height="400">
+  <defs>
+    <radialGradient id="luna-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4ab8f0" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#4ab8f0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="luna-fill" cx="38%" cy="36%" r="60%">
+      <stop offset="0%" stop-color="#c8e8f8"/>
+      <stop offset="100%" stop-color="#5aaad0"/>
+    </radialGradient>
+    <linearGradient id="onda-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4ab8f0" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#4ab8f0" stop-opacity="0.8"/>
+      <stop offset="70%" stop-color="#2a7aaa" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#2a7aaa" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="onda-grad2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7dd4f0" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#7dd4f0" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#7dd4f0" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- bagliore luna -->
+  <circle cx="340" cy="130" r="110" fill="url(#luna-glow)"/>
+
+  <!-- luna -->
+  <circle cx="340" cy="130" r="68" fill="url(#luna-fill)" opacity="0.9"/>
+  <circle cx="365" cy="112" r="50" fill="#eaf5fb"/>
+
+  <!-- crateri sottili -->
+  <circle cx="320" cy="118" r="6" fill="none" stroke="#b0d8ee" stroke-width="0.8" opacity="0.6"/>
+  <circle cx="348" cy="145" r="4" fill="none" stroke="#b0d8ee" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- circuiti attorno alla luna -->
+  <line x1="408" y1="105" x2="435" y2="105" stroke="#4ab8f0" stroke-width="1" stroke-linecap="round" opacity="0.7"/>
+  <line x1="435" y1="105" x2="435" y2="82" stroke="#4ab8f0" stroke-width="1" stroke-linecap="round" opacity="0.7"/>
+  <line x1="435" y1="82" x2="455" y2="82" stroke="#4ab8f0" stroke-width="1" stroke-linecap="round" opacity="0.7"/>
+  <circle cx="435" cy="105" r="2" fill="#4ab8f0" opacity="0.8"/>
+  <circle cx="455" cy="82" r="2.5" fill="none" stroke="#4ab8f0" stroke-width="1" opacity="0.8"/>
+  <circle cx="455" cy="82" r="1" fill="#4ab8f0" opacity="0.8"/>
+
+  <line x1="415" y1="158" x2="445" y2="158" stroke="#4ab8f0" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+  <line x1="445" y1="158" x2="445" y2="175" stroke="#4ab8f0" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+  <circle cx="445" cy="158" r="2" fill="#4ab8f0" opacity="0.6"/>
+  <circle cx="445" cy="175" r="2.5" fill="none" stroke="#4ab8f0" stroke-width="1" opacity="0.6"/>
+  <circle cx="445" cy="175" r="1" fill="#4ab8f0" opacity="0.6"/>
+
+  <line x1="278" y1="95" x2="255" y2="95" stroke="#4ab8f0" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+  <line x1="255" y1="95" x2="255" y2="72" stroke="#4ab8f0" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+  <circle cx="255" cy="95" r="2" fill="#4ab8f0" opacity="0.6"/>
+  <circle cx="255" cy="72" r="2.5" fill="none" stroke="#4ab8f0" stroke-width="1" opacity="0.6"/>
+  <circle cx="255" cy="72" r="1" fill="#4ab8f0" opacity="0.6"/>
+
+  <!-- stelline -->
+  <circle cx="180" cy="60" r="1.5" fill="#4ab8f0" opacity="0.6"/>
+  <circle cx="210" cy="40" r="1" fill="#4ab8f0" opacity="0.4"/>
+  <circle cx="460" cy="50" r="1.5" fill="#4ab8f0" opacity="0.5"/>
+  <circle cx="480" cy="120" r="1" fill="#2a7aaa" opacity="0.5"/>
+  <circle cx="200" cy="170" r="1.2" fill="#4ab8f0" opacity="0.4"/>
+  <circle cx="470" cy="200" r="1.5" fill="#4ab8f0" opacity="0.4"/>
+
+  <!-- ONDE DEL SONNO EEG -->
+  <!-- onda 1 - principale -->
+  <path d="M 20 260
+    L 60 260
+    L 75 260
+    L 85 230
+    L 95 290
+    L 105 220
+    L 115 300
+    L 125 260
+    L 145 260
+    L 155 245
+    L 165 275
+    L 175 260
+    L 210 260
+    L 220 248
+    L 230 272
+    L 240 260
+    L 280 260
+    L 290 235
+    L 300 285
+    L 310 250
+    L 320 270
+    L 330 260
+    L 370 260
+    L 380 250
+    L 390 270
+    L 400 260
+    L 480 260"
+    fill="none" stroke="url(#onda-grad)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- onda 2 - più sottile sopra -->
+  <path d="M 20 230
+    L 70 230
+    L 80 222
+    L 90 238
+    L 100 226
+    L 110 234
+    L 120 230
+    L 160 230
+    L 172 220
+    L 184 240
+    L 196 230
+    L 240 230
+    L 252 222
+    L 264 238
+    L 276 230
+    L 340 230
+    L 352 224
+    L 364 236
+    L 376 230
+    L 480 230"
+    fill="none" stroke="url(#onda-grad2)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- onda 3 - sotto più piatta -->
+  <path d="M 20 290
+    L 80 290
+    L 90 284
+    L 100 296
+    L 110 290
+    L 170 290
+    L 182 282
+    L 194 298
+    L 206 290
+    L 300 290
+    L 312 284
+    L 324 296
+    L 336 290
+    L 480 290"
+    fill="none" stroke="url(#onda-grad2)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+
+  <!-- linea base orizzontale -->
+  <line x1="20" y1="260" x2="480" y2="260" stroke="#4ab8f0" stroke-width="0.3" opacity="0.2" stroke-dasharray="4,4"/>
+
+  <!-- etichette dati fluttuanti -->
+  <rect x="55" y="305" width="60" height="18" rx="3" fill="rgba(74,184,240,0.08)" stroke="rgba(74,184,240,0.25)" stroke-width="0.8"/>
+  <text x="85" y="317" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#2a7aaa" opacity="0.8">REM 42%</text>
+
+  <rect x="175" y="305" width="62" height="18" rx="3" fill="rgba(74,184,240,0.08)" stroke="rgba(74,184,240,0.25)" stroke-width="0.8"/>
+  <text x="206" y="317" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#2a7aaa" opacity="0.8">NREM 58%</text>
+
+  <rect x="300" y="305" width="70" height="18" rx="3" fill="rgba(74,184,240,0.08)" stroke="rgba(74,184,240,0.25)" stroke-width="0.8"/>
+  <text x="335" y="317" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#2a7aaa" opacity="0.8">BPM 58</text>
+
+  <!-- puntini connettori tra onda e label -->
+  <line x1="85" y1="260" x2="85" y2="305" stroke="#4ab8f0" stroke-width="0.6" stroke-dasharray="2,2" opacity="0.4"/>
+  <line x1="206" y1="260" x2="206" y2="305" stroke="#4ab8f0" stroke-width="0.6" stroke-dasharray="2,2" opacity="0.4"/>
+  <line x1="335" y1="260" x2="335" y2="305" stroke="#4ab8f0" stroke-width="0.6" stroke-dasharray="2,2" opacity="0.4"/>
+
+</svg>
