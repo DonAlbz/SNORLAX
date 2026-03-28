@@ -17,8 +17,7 @@
         <!-- NAVBAR -->
         <nav id="navbar">
             <div class="logo">Snorlax <i class="bi bi-moon-stars-fill"></i>
-                Sleep
-                Tech</div>
+            </div>
             <ul class="menu">
                 <li><a href="home.html" class="active">Home</a></li>
                 <li><a href="prodotti.html">Prodotti</a></li>
@@ -31,125 +30,134 @@
     </header>
     <!-- SEZIONE INTRODUTTIVA-->
     <section class="home">
+        <!-- BLOCCO 1 -->
         <div class="blocco blocco-1">
             <div class="blocco-testo">
-                <div class="etichetta">Tecnologia del sonno</div>
+                <div class="etichetta">
+                    <span class="etichetta-linea"></span>
+                    Tecnologia del sonno
+                </div>
                 <h2>Dormi con <em>intelligenza.</em></h2>
                 <p>I nostri materassi sono progettati con sensori avanzati per monitorare salute, sonno e sogni. Il tuo
                     riposo, analizzato e ottimizzato ogni notte.</p>
-                <div class="btn">Scopri i modelli</div>
+                <div class="btn">Scopri i modelli
+                    <i class="bi bi-arrow-right"></i>
+                </div>
             </div>
-            <div class="col-md-6 d-flex align-items-center justify-content-center">
+            <div class="blocco-media">
                 <img src="img/svg/illustrazione_sonno.svg" alt="sonno tech" style="width: 100%; max-width: 480px;">
             </div>
         </div>
-        <div class="blocco blocco-2 inverso">
+        <!-- BLOCCO 2 -->
+        <div class="blocco blocco-2">
             <div class="blocco-testo">
-                <div class="etichetta">Analisi notturna</div>
-                <h2>Ogni notte, <em>una storia.</em></h2>
-                <p>Mentre dormi, Snorlax legge ogni segnale; per trasformare ogni notte in un'opportunità di conoscenza.
+                <div class="etichetta etichetta-light">
+                    <span class="etichetta-linea"></span>Analisi notturna
+                </div>
+                <h2 class="h2-light">Ogni notte, <em>una storia.</em></h2>
+                <p class="p-light">Mentre dormi, Snorlax legge ogni segnale; per trasformare ogni notte in
+                    un'opportunità di conoscenza.
                 </p>
-                <h5>· Sensori IA per il sonno</h5>
-                <h5>· Analisi dei sogni in tempo reale</h5>
-                <h5>· Dashboard dati personale</h5>
-                <div class="btn">Dashboard Utente</div>
+                <ul class="feature-list">
+                    <li><i class="bi bi-check2"></i> Sensori IA per il sonno</li>
+                    <li><i class="bi bi-check2"></i> Analisi dei sogni in tempo reale</li>
+                    <li><i class="bi bi-check2"></i> Dashboard dati personale</li>
+                </ul>
+                <a href="#" class="btn-blocco btn-blocco-light">
+                    Dashboard Utente
+                    <i class="bi bi-arrow-right"></i>
+                </a>
             </div>
-            <div class="col-md-6 d-flex align-items-center justify-content-center">
-                <!-- <video autoplay loop muted playsinline class="mx-auto d-block"
-                    style="width: 100%; max-width: 400px; border-radius: 8px;">
-                    <source src="img/video/video_breve_sogni.mp4" type="video/mp4">
-                </video> -->
-                <img src="img/svg/mockup_telefono.svg" alt="sonno tech" style="width: 100%; max-width: 240px;">
-            </div>
-        </div>
-
-        <div class="blocco blocco-3">
-            <div class="blocco-testo">
-                <div class="etichetta">I nostri modelli</div>
-                <h2>Tre esperienze <em>di sonno.</em></h2>
-                <p>Sense, Vision, Dream. Ogni modello pensato per uno stile di vita diverso, con tecnologia
-                    all'avanguardia.</p>
-                <div class="btn">Vedi il catalogo</div>
-            </div>
-            <div id="mioCarosello" class="carousel slide carousel-fade" data-bs-ride="carousel"
-                style="width: 400px; flex-shrink: 0;">
-
-                <!-- indicatori puntini -->
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#mioCarosello" data-bs-slide-to="0" class="active"></button>
-                    <button type="button" data-bs-target="#mioCarosello" data-bs-slide-to="1"></button>
-                    <button type="button" data-bs-target="#mioCarosello" data-bs-slide-to="2"></button>
-                </div>
-
-                <!-- immagini -->
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="img/Sense.jpeg" class="d-block w-100" style="max-width: 400px; border-radius: 8px;"
-                            alt="Modello Sense">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/Vision.jpeg" class="d-block w-100" style="max-width: 400px; border-radius: 8px;"
-                            alt="Modello Vision">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/Dream.jpeg" class="d-block w-100" style="max-width: 400px; border-radius: 8px;"
-                            alt="Modello Dream">
-                    </div>
-                </div>
-
-                <!-- frecce -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#mioCarosello" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#mioCarosello" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
+            <div class="blocco-media">
+                <img class="mockup-zoom" src="img/svg/mockup_telefono.svg" alt="sonno tech">
             </div>
         </div>
     </section>
     <!-- SEZIONE DETTAGLI NOSTRA FILOSOFIA E CARATTERISTICHE -->
-    <section class="intro">
-        <div class="intro-immagine">
-            <!-- immagine particolare ? -->
+    <section class="filosofia">
+        <div class="filosofia-header">
+            <div class="etichetta etichetta-centered">
+                <span class="etichetta-linea"></span>
+                La nostra filosofia
+                <span class="etichetta-linea"></span>
+            </div>
+            <h2 class="filosofia-titolo">Il sonno è <em>scienza,</em><br>non caso.</h2>
+            <p class="filosofia-desc">Crediamo che il riposo sia alla base di tutto. Per questo non ci siamo fermati al
+                comfort — abbiamo voluto capirlo, misurarlo, migliorarlo.</p>
         </div>
-        <div class="intro-testo">
-            <span class="section-etichetta">La nostra filosofia</span>
-            <h2 class="section-titolo">Il sonno è<br><em>scienza,</em> non caso.</h2>
-            <p class="section-descrizione">Crediamo che il riposo sia alla base di tutto. Per questo non ci siamo
-                fermati al comfort — abbiamo voluto capirlo, misurarlo, migliorarlo.
-                Dati reali, insight profondi, riposo ottimizzato.</p>
-            <div class="intro-lista">
-                <div class="intro-box">
-                    <div class="intro-box-icona icona-blue">
-                        <i class="bi bi-heart-pulse" style="font-size: 20px;"></i>
-                    </div>
-                    <h4>Monitoraggio vitale</h4>
-                    <p>Frequenza cardiaca e respiratoria durante la notte.</p>
+        <!-- Citazione centrale -->
+        <div class="filosofia-quote">
+            <blockquote>
+                "Dati reali, insight profondi, riposo ottimizzato."
+            </blockquote>
+        </div>
+        <!-- Griglia caratteristiche -->
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon-wrap">
+                    <i class="bi bi-heart-pulse"></i>
                 </div>
-                <div class="intro-box">
-                    <div class="intro-box-icona icona-green">
-                        <i class="bi bi-clock" style="font-size: 20px;"></i>
-                    </div>
-                    <h4>Fasi del sonno</h4>
-                    <p>REM, leggero e profondo rilevati in automatico.</p>
+                <div class="feature-num">01</div>
+                <h4>Monitoraggio vitale</h4>
+                <p>Frequenza cardiaca e respiratoria rilevate continuamente durante il riposo, senza cavi né dispositivi
+                    da indossare.</p>
+                <div class="feature-tag">Bio-sensing</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon-wrap">
+                    <i class="bi bi-clock"></i>
                 </div>
-                <div class="intro-box">
-                    <div class="intro-box-icona icona-amber">
-                        <i class="bi bi-cloud" style="font-size: 20px;"></i>
-                    </div>
-                    <h4>Analisi sogni</h4>
-                    <p>Algoritmi predittivi per comprendere i sogni.</p>
+                <div class="feature-num">02</div>
+                <h4>Fasi del sonno</h4>
+                <p>REM, leggero e profondo rilevati in automatico attraverso algoritmi di machine learning addestrati su
+                    milioni di notti.</p>
+                <div class="feature-tag">IA integrata</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon-wrap">
+                    <i class="bi bi-cloud-moon"></i>
                 </div>
-                <div class="intro-box">
-                    <div class="intro-box-icona icona-red">
-                        <i class="bi bi-grid" style="font-size: 20px;"></i>
-                    </div>
-                    <h4>Dashboard live</h4>
-                    <p>Visualizza tutti i dati in tempo reale sul tuo profilo.</p>
+                <div class="feature-num">03</div>
+                <h4>Analisi dei sogni</h4>
+                <p>Algoritmi predittivi elaborano i pattern neurali notturni per identificare e catalogare le attività
+                    oniriche più significative.</p>
+                <div class="feature-tag">Dream Mapping</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon-wrap">
+                    <i class="bi bi-grid-1x2"></i>
                 </div>
+                <div class="feature-num">04</div>
+                <h4>Dashboard live</h4>
+                <p>Tutti i dati della notte, visualizzati in tempo reale sul tuo profilo personale. Grafici, trend e
+                    consigli su misura.</p>
+                <div class="feature-tag">Real-time</div>
+            </div>
+        </div>
+        <!-- Statistiche -->
+        <div class="filosofia-stats">
+            <div class="fstat">
+                <span class="fstat-num">98<em>%</em></span>
+                <span class="fstat-label">Precisione sensori</span>
+            </div>
+            <div class="fstat-divider"></div>
+            <div class="fstat">
+                <span class="fstat-num">+12k</span>
+                <span class="fstat-label">Notti analizzate</span>
+            </div>
+            <div class="fstat-divider"></div>
+            <div class="fstat">
+                <span class="fstat-num">3</span>
+                <span class="fstat-label">Modelli disponibili</span>
+            </div>
+            <div class="fstat-divider"></div>
+            <div class="fstat">
+                <span class="fstat-num">24<em>/7</em></span>
+                <span class="fstat-label">Supporto attivo</span>
             </div>
         </div>
     </section>
+
     <!-- SEZIONE I NOSTRI MODELLI -->
     <section class="models-preview">
         <div class="models-preview-header">
@@ -158,9 +166,8 @@
         </div>
         <div class="models-grid">
             <a href="prodotti.html#sense" class="model-card-preview">
-                <div class="card-img-wrap">
+                <div class="card-img-wrap" style="background-image: url('img/Sense.jpeg');">
                     <span class="card-number">01 / Snorlax Sense</span>
-                    <!-- qui ci sarà l'immagine di Sense -->
                 </div>
                 <div class="card-content">
                     <h3>Snorlax Sense</h3>
@@ -169,9 +176,8 @@
                 </div>
             </a>
             <a href="prodotti.html#vision" class="model-card-preview">
-                <div class="card-img-wrap">
+                <div class="card-img-wrap" style="background-image: url('img/Vision.jpeg');">
                     <span class="card-number">02 / Snorlax Vision</span>
-                    <!-- qui ci sarà l'immagine di Vision -->
                 </div>
                 <div class="card-content">
                     <h3>Snorlax Vision</h3>
@@ -180,9 +186,8 @@
                 </div>
             </a>
             <a href="prodotti.html#dream" class="model-card-preview">
-                <div class="card-img-wrap">
+                <div class="card-img-wrap" style="background-image: url('img/Dream.jpeg');">
                     <span class="card-number">03 / Snorlax Dream</span>
-                    <!-- qui ci sarà l'immagine di Dream -->
                 </div>
                 <div class="card-content">
                     <h3>Snorlax Dream</h3>
@@ -195,22 +200,26 @@
             <a href="prodotti.html" class="btn-secondario">Vedi tutti i dettagli →</a>
         </div>
     </section>
+
     <!-- SEZIONE ACQUISTA O PARLA -->
     <section class="section-invito">
-        <span class="section-etichetta">Inizia stanotte</span>
-        <h2 class="section-titolo">Pronto a dormire <em>meglio?</em></h2>
-        <p class="section-descrizione">Scegli il modello che fa per te e inizia il tuo viaggio verso un sonno
-            consapevole.</p>
-        <div class="section-buttons">
-            <a href="prodotti.html" class="btn-principale"><span>Acquista ora</span></a>
-            <a href="contatti.html" class="btn-secondario">Parla con noi</a>
+        <div class="contenuto-invito">
+            <span class="section-etichetta">Inizia stanotte</span>
+            <h2 class="section-titolo">Pronto a dormire <em>meglio?</em></h2>
+            <p class="section-descrizione">Scegli il modello che fa per te e inizia il tuo viaggio verso un sonno
+                consapevole.</p>
+            <div class="section-buttons">
+                <a href="#" class="btn-principale"><span>Acquista ora</span></a>
+                <a href="#" class="btn-secondario">Parla con noi</a>
+            </div>
         </div>
     </section>
-    <!-- FOOTER -->
+
+    <!-- FOOTER da modificare il css-->
     <footer>
         <div class="footer">
             <div class="footer-brand">
-                <a href="home.html" class="logo">Snorlax <span>·</span> Sleep Tech</a>
+                <a href="home.html" class="logo">Snorlax</a>
                 <p>Materassi intelligenti con tecnologia all'avanguardia per trasformare il tuo sonno in dat
                     i preziosi.</p>
             </div>
