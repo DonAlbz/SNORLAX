@@ -16,15 +16,20 @@
     <header>
         <!-- NAVBAR -->
         <nav id="navbar">
-            <div class="logo">Snorlax <i class="bi bi-moon-stars-fill"></i>
+            <div class="logo">
+                <div class="logo-testo">
+                    <span class="logo-nome">Snorlax</span>
+                    <div class="logo-secondario">It's time to Relax
+                        <i class="bi bi-moon-stars-fill"></i>
+                    </div>
+                </div>
             </div>
             <ul class="menu">
-                <li><a href="home.html" class="active">Home</a></li>
-                <li><a href="prodotti.html">Prodotti</a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="prodotti.html" class="active">Prodotti</a></li>
                 <li><a href="dashboard.html">Dashboard</a></li>
                 <li><a href="contatti.html">Contatti</a></li>
             </ul>
-
             <a href="login.html" class="login">Login <i class="bi bi-person-circle"></i></a>
         </nav>
     </header>
@@ -63,7 +68,7 @@
                 </ul>
                 <div class="prezzi-modello">
                     <div class="blocco-prezzi">
-                        <span class="prezzo">€1.490</span>
+                        <span class="prezzo">€1.200</span>
                         <span class="nota-prezzo">IVA inclusa · Spedizione gratuita</span>
                     </div>
                     <div class="azioni-modello">
@@ -100,7 +105,7 @@
                 </ul>
                 <div class="prezzi-modello">
                     <div class="blocco-prezzi">
-                        <span class="prezzo">€2.190</span>
+                        <span class="prezzo">€1.500</span>
                         <span class="nota-prezzo">IVA inclusa · Spedizione gratuita</span>
                     </div>
                     <div class="azioni-modello">
@@ -136,7 +141,7 @@
                 </ul>
                 <div class="prezzi-modello">
                     <div class="blocco-prezzi">
-                        <span class="prezzo">€3.290</span>
+                        <span class="prezzo">€2.200</span>
                         <span class="nota-prezzo">IVA inclusa · Spedizione gratuita</span>
                     </div>
                     <div class="azioni-modello">
@@ -148,11 +153,57 @@
         </div>
     </section>
 
-    <!-- FOOTER da modificare il css-->
+    <!-- SEZIONE ABBONAMENTI -->
+    <section class="sezione-abbonamenti">
+        <div class="abbonamenti-header">
+            <span>Abbonamenti</span>
+            <h2 class="testo-scelta">Scegli il tuo <em>piano</em></h2>
+        </div>
+        <div class="abbonamenti-grid">
+            <!-- PIANO GRATUITO -->
+            <div class="scheda-abbonamento">
+                <div class="piano-nome">Gratuito</div>
+                <div class="piano-prezzo">€0 <span>/ sempre</span></div>
+                <ul class="piano-features">
+                    <li><i class="bi bi-check2"></i> Dati del sonno ultimi 7 giorni</li>
+                    <li><i class="bi bi-check2"></i> Report giornaliero</li>
+                    <li><i class="bi bi-check2"></i> Fasi del sonno</li>
+                </ul>
+                <a href="#" class="btn-gratis">Inizia gratis</a>
+            </div>
+            <!-- PIANO PRO -->
+            <div class="scheda-abbonamento scheda-abbonamento--evidenziata">
+                <div class="piano-badge">Più popolare</div>
+                <div class="piano-nome">Pro</div>
+                <div class="piano-prezzo">€9 <span>/ mese</span></div>
+                <ul class="piano-features">
+                    <li><i class="bi bi-check2"></i> Dati del sonno ultimi 6 mesi</li>
+                    <li><i class="bi bi-check2"></i> Report giornaliero</li>
+                    <li><i class="bi bi-check2"></i> Fasi del sonno</li>
+                    <li><i class="bi bi-check2"></i> Analisi sogni con IA</li>
+                </ul>
+                <a href="#" class="btn-abbonamento"><span>Abbonati</span></a>
+            </div>
+            <!-- PIANO PREMIUM -->
+            <div class="scheda-abbonamento">
+                <div class="piano-nome">Premium</div>
+                <div class="piano-prezzo">€12 <span>/ mese</span></div>
+                <ul class="piano-features">
+                    <li><i class="bi bi-check2"></i> Dati del sonno ultimo anno</li>
+                    <li><i class="bi bi-check2"></i> Report giornaliero</li>
+                    <li><i class="bi bi-check2"></i> Fasi del sonno</li>
+                    <li><i class="bi bi-check2"></i> Analisi sogni con IA</li>
+                    <li><i class="bi bi-check2"></i> Supporto prioritario 24/7</li>
+                </ul>
+                <a href="#" class="btn-abbonamento"><span>Abbonati</span></a>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
     <footer>
         <div class="footer">
             <div class="footer-brand">
-                <a href="home.html" class="logo">Snorlax</a>
+                <a href="home.html" class="logo-footer">Snorlax <i class="bi bi-moon-stars-fill"></i></a>
                 <p>Materassi intelligenti con tecnologia all'avanguardia per trasformare il tuo sonno in dat
                     i preziosi.</p>
             </div>

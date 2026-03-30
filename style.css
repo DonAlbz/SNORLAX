@@ -112,8 +112,8 @@ h3 {
 .btn-secondario {
     display: inline-block;
     padding: 0.85rem 2rem;
-    border: 1px solid rgba(74, 155, 191, 0.5);
-    color: var(--text-mid);
+    border: 1px solid var(--ice-strong);
+    color: var(--text-deep);
     font-family: 'DM Sans', sans-serif;
     font-size: 0.75rem;
     letter-spacing: 0.15em;
@@ -125,8 +125,30 @@ h3 {
 }
 
 .btn-secondario:hover {
-    border-color: var(--ice-strong);
-    color: var(--ice-strong);
+    background-color: var(--text-mid);
+    color: #fff;
+    border-color: var(--text-soft);
+}
+
+.btn-preview {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.8rem;
+    border: 1px solid var(--ice-strong);
+    border-radius: 4px;
+    background-color: transparent;
+    color: var(--ice-deep);
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-preview:hover {
+    background-color: var(--text-mid);
+    color: #fff;
+    border-color: var(--text-soft);
 }
 
 /* NAVBAR IN COMUNE */
@@ -151,12 +173,44 @@ h3 {
     font-size: 1.3rem;
     font-weight: 300;
     letter-spacing: 0.12em;
-    color: #eaf6ff;
     display: flex;
     flex: 1;
     align-items: center;
     justify-content: flex-start;
     gap: 0.3rem;
+}
+
+.logo-testo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    color: var(--ice-light);
+}
+
+.logo-secondario {
+    font-size: 0.85rem;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    color: var(--ice-pale);
+    opacity: 0.8;
+    width: 100%;
+    text-align: center;
+}
+
+.logo-nome {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-nome::before,
+.logo-nome::after {
+    content: '';
+    width: 2cm;
+    height: 1px;
+    background-color: var(--ice-light);
+    opacity: 0.5;
 }
 
 .menu {
@@ -200,64 +254,6 @@ h3 {
     background: var(--ice-strong);
     border-color: transparent;
     color: #fff !important;
-}
-
-/* FOOTER IN COMUNE */
-
-footer {
-    background: var(--steel);
-    padding: 4rem 5% 2rem;
-}
-
-.footer {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 3rem;
-    margin-bottom: 3rem;
-    padding-bottom: 3rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.footer-brand .nav-logo {
-    color: var(--ice-light);
-    margin-bottom: 1rem;
-    display: block;
-}
-
-.footer-brand p {
-    font-size: 0.8rem;
-    color: rgba(200, 220, 240, 0.5);
-    line-height: 1.8;
-}
-
-.footer-colonna h4 {
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: rgba(200, 220, 240, 0.4);
-    margin-bottom: 1.2rem;
-}
-
-.footer-colonna ul {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-}
-
-.footer-colonna a {
-    font-size: 0.8rem;
-    color: rgba(200, 220, 240, 0.55);
-    transition: color 0.2s;
-}
-
-.footer-colonna a:hover {
-    color: var(--ice-light);
-}
-
-.footer-bottom {
-    font-size: 0.7rem;
-    color: rgba(200, 220, 240, 0.3);
-    letter-spacing: 0.1em;
 }
 
 /* HOME.HTML -> Sezione Introduttiva */
@@ -466,17 +462,7 @@ footer {
 /* SEZIONE INTRO */
 .filosofia {
     padding: 7rem 5% 6rem;
-    background:
-        radial-gradient(circle at center, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.6) 35%, transparent 65%),
-
-        radial-gradient(circle at 25% 30%, rgba(180, 220, 255, 0.4), transparent 60%),
-        radial-gradient(circle at 75% 70%, rgba(200, 230, 255, 0.35), transparent 65%),
-
-        linear-gradient(to bottom, #eaf6ff, #ffffff),
-
-        repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255, 255, 255, 0.35) 40px),
-        repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255, 255, 255, 0.35) 40px);
-
+    background: radial-gradient(ellipse at center, #ffffff 0%, #eaf6ff 50%, #c8e4f5 100%);
     background-size: cover;
     position: relative;
 }
@@ -689,17 +675,7 @@ footer {
 /* SEZIONE MODELLI */
 .models-preview {
     padding: 7rem 5% 6rem;
-    background:
-        radial-gradient(circle at center, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.6) 35%, transparent 65%),
-
-        radial-gradient(circle at 25% 30%, rgba(180, 220, 255, 0.4), transparent 60%),
-        radial-gradient(circle at 75% 70%, rgba(200, 230, 255, 0.35), transparent 65%),
-
-        linear-gradient(to bottom, #eaf6ff, #ffffff),
-
-        repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255, 255, 255, 0.35) 40px),
-        repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255, 255, 255, 0.35) 40px);
-
+    background: radial-gradient(ellipse at center, #ffffff 0%, #eaf6ff 50%, #c8e4f5 100%);
     background-size: cover;
     position: relative;
     text-align: center;
@@ -718,15 +694,11 @@ footer {
     height: 100%;
     text-decoration: none;
     color: inherit;
-
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(12px);
-
+    background: linear-gradient(135deg, #0a1628 0%, #0d2040 50%, #0a1a35 100%);
+    border: 1px solid rgba(100, 180, 255, 0.15);
+    color: #eaf6ff;
     border-radius: 20px;
     padding: 1.5rem;
-
-    border: 1px solid rgba(0, 0, 0, 0.05);
-
     transition: all 0.35s ease;
     position: relative;
     overflow: hidden;
@@ -734,34 +706,19 @@ footer {
 
 .model-card-preview:hover {
     transform: translateY(-8px) scale(1.01);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-}
-
-.model-card-preview::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at top left, rgba(0, 170, 255, 0.15), transparent 60%);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.model-card-preview:hover::before {
-    opacity: 1;
+    box-shadow: 0 20px 40px rgba(0, 100, 200, 0.2);
+    border-color: rgba(100, 180, 255, 0.3);
 }
 
 .card-img-wrap {
     height: 260px;
     border-radius: 14px;
-
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     display: flex;
     align-items: flex-end;
     padding: 1rem;
-
     transition: transform 0.4s ease;
 }
 
@@ -772,6 +729,8 @@ footer {
 .card-number {
     font-size: 0.8rem;
     opacity: 0.6;
+    color: black;
+    font-weight: 600;
 }
 
 .card-content {
@@ -788,6 +747,7 @@ footer {
 .card-content p {
     font-size: 0.95rem;
     opacity: 0.7;
+    color: var(--ice-pale);
 }
 
 .card-price {
@@ -799,6 +759,7 @@ footer {
 .card-price span {
     font-size: 0.85rem;
     opacity: 0.6;
+    color: var(--ice-frost);
 }
 
 /* SEZIONE FINALE PRIMA DI FOOTER nella home*/
@@ -824,4 +785,64 @@ footer {
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+/* FOOTER IN COMUNE */
+
+footer {
+    background: linear-gradient(135deg, #0a1628 0%, #0d2040 50%, #0a1a35 100%);
+    padding: 4rem 5% 2rem;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo-footer {
+    color: var(--ice-light);
+    font-family: 'Italic', serif;
+    font-size: 1.3rem;
+    font-weight: 300;
+    letter-spacing: 0.12em;
+}
+
+.footer-brand p {
+    font-size: 0.8rem;
+    color: var(--ice-frost);
+    line-height: 1.8;
+}
+
+.footer-colonna h4 {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ice-pale);
+    margin-bottom: 1.2rem;
+}
+
+.footer-colonna ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.footer-colonna a {
+    font-size: 0.8rem;
+    color: var(--ice-pale);
+    transition: color 0.2s;
+}
+
+.footer-colonna a:hover {
+    color: var(--ice-frost);
+}
+
+.footer-bottom {
+    font-size: 0.7rem;
+    color: var(--ice-pale);
+    letter-spacing: 0.1em;
 }
