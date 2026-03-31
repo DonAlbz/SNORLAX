@@ -14,46 +14,10 @@
 
 /* CSS esclusivo di della pagina prodotti */
 
-.intestazione {
-    position: relative;
-    padding: 10rem 5% 6rem;
-    text-align: center;
-    background: radial-gradient(ellipse at center, #ffffff 0%, #eaf6ff 50%, #c8e4f5 100%);
-    margin-bottom: -2rem;
-    padding-bottom: 5rem;
-}
-
-.intestazione::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at 50% 20%, rgba(74, 155, 191, 0.18), transparent 70%);
-    pointer-events: none;
-}
-
-.intestazione h1 {
-    font-size: clamp(3rem, 6vw, 5rem);
-    color: var(--text-dark);
-    line-height: 1;
-}
-
-.intestazione h1 em {
-    color: var(--ice-strong);
-    font-style: italic;
-}
-
-.intestazione p {
-    font-size: 1rem;
-    color: var(--text-mid);
-    max-width: 480px;
-    margin: 1.5rem auto 0;
-    line-height: 1.8;
-}
-
 .sezione-modelli {
     padding: 8rem 5%;
     padding-top: 6rem;
-    background: radial-gradient(ellipse at center, #ffffff 0%, #eaf6ff 50%, #c8e4f5 100%);
+    background: transparent;
     display: flex;
     flex-direction: column;
     gap: 6rem;
@@ -176,7 +140,7 @@
 
 .sezione-abbonamenti {
     padding: 6rem 5%;
-    background: radial-gradient(ellipse at center, #ffffff 0%, #eaf6ff 50%, #c8e4f5 100%);
+    background: transparent;
     text-align: center;
 }
 
@@ -187,7 +151,7 @@
 .abbonamenti-header span {
     color: var(--ice-deep);
     font-family: 'Cormorant Garamond', serif;
-    font-size: 3.4rem;
+    font-size: 4rem;
 }
 
 .abbonamenti-header em {
