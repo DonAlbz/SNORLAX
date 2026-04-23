@@ -12,7 +12,7 @@ include 'includes/header.php';
             <p><?= e(t('home_hero_desc')) ?></p>
             <a href="#preview-modelli" class="btn-preview"><?= e(t('discover_models')) ?> <i class="bi bi-arrow-right"></i></a>
         </div>
-        <div class="blocco-media"><img src="img/svg/illustrazione_sonno.svg" alt="sleep tech" style="width:100%;max-width:480px;"></div>
+        <div class="blocco-media"><img src="img/svg/sonno.svg" alt="sleep tech" style="width:100%;max-width:480px;"></div>
     </div>
     <div class="blocco blocco-1">
         <div class="blocco-testo">
