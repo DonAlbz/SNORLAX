@@ -195,20 +195,6 @@
     width: 100%
 }
 
-@media (max-width:992px) {
-
-    .stat-card,
-    .panel-card.span-4,
-    .panel-card.span-6,
-    .panel-card.span-8 {
-        grid-column: 1/-1
-    }
-
-    .user-nav {
-        display: none
-    }
-}
-
 .ai-session {
     padding: 18px 0;
     border-bottom: 1px solid #e2e8f0
@@ -267,7 +253,24 @@
     line-height: 1.5
 }
 
-@media (max-width:768px) {
+/* ============================================================
+   RESPONSIVE — dashboard / auth
+   ============================================================ */
+@media (max-width: 992px) {
+
+    .stat-card,
+    .panel-card.span-4,
+    .panel-card.span-6,
+    .panel-card.span-8 {
+        grid-column: 1/-1
+    }
+
+    .user-nav {
+        display: none
+    }
+}
+
+@media (max-width: 768px) {
 
     .ai-session-head,
     .ai-summary-row {
@@ -278,5 +281,55 @@
         display: block;
         min-width: 0;
         margin-bottom: 4px
+    }
+
+    .auth-wrap {
+        margin: 120px auto 60px;
+        padding: 24px;
+    }
+
+    .dashboard-grid {
+        padding: 0 12px;
+        gap: 16px;
+    }
+
+    .stat-value {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .auth-wrap {
+        margin: 80px 16px 40px;
+        padding: 20px 16px;
+        border-radius: 16px;
+    }
+
+    .dashboard-page .hero {
+        padding: 0 12px;
+        margin: 16px auto 6px;
+    }
+
+    .dashboard-grid {
+        padding: 0 12px;
+        gap: 12px;
+        margin-bottom: 40px;
+    }
+
+    .stat-card,
+    .panel-card {
+        padding: 18px 16px;
+        border-radius: 16px;
+    }
+
+    .stat-value {
+        font-size: 22px;
+    }
+
+    .table-lite th,
+    .table-lite td {
+        font-size: 13px;
+        padding: 8px 0;
     }
 }

@@ -337,16 +337,35 @@
     .immagine-modello {
         height: 220px;
     }
+
+    /* Abbonamenti colonna unica */
+    .abbonamenti-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+    }
 }
 
 @media (max-width: 480px) {
 
     .scheda-modello {
         padding: 1.5rem;
+        border-radius: 16px;
     }
 
     .abbonamenti-grid {
         grid-template-columns: 1fr;
+    }
+
+    .nome-modello {
+        font-size: 1.6rem;
+    }
+
+    .immagine-modello {
+        height: 180px;
+    }
+
+    .sezione-modelli {
+        gap: 2.5rem;
     }
 }
 

@@ -260,6 +260,7 @@
     line-height: 1.75;
     margin: 0;
 }
+
 /* ============================================================
    RESPONSIVE — contatti.php
    ============================================================ */
@@ -301,11 +302,23 @@
 
 @media (max-width: 480px) {
 
+    .contatti {
+        padding: 3rem 1.2rem;
+    }
+
     .contatti-form-wrap {
         padding: 1.4rem;
     }
 
     .faq-card {
         padding: 1.4rem 1.2rem;
+    }
+
+    .faq {
+        padding: 3rem 1.2rem;
+    }
+
+    .contatto-card {
+        padding: 1rem 1rem;
     }
 }

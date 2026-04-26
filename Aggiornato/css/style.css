@@ -243,7 +243,7 @@ h3 {
 .logo-nome::before,
 .logo-nome::after {
     content: '';
-    width: 2cm;
+    width: 32px;
     height: 1px;
     background-color: var(--ice-light);
     opacity: 0.5;
@@ -265,12 +265,15 @@ h3 {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: rgba(220, 240, 255, 0.75);
-    transition: color 0.2s;
+    transition: color 0.2s, background 0.2s;
+    padding: 5px 12px;
+    border-radius: 4px;
 }
 
 .menu a:hover,
 .menu a.active {
-    color: var(--ice-light);
+    color: #0d1e2b !important;
+    background-color: #ffffff;
 }
 
 .login {
@@ -941,12 +944,12 @@ footer {
    ============================================================ */
 @media (max-width: 992px) {
 
-    /* Navbar */
+    /* Navbar — rimane sticky anche su tablet */
     #navbar {
         flex-wrap: wrap;
         gap: 0;
         padding: 1rem 5%;
-        position: relative;
+        position: sticky;
     }
 
     .nav-toggle {
@@ -981,8 +984,14 @@ footer {
 
     .menu a {
         display: block;
-        padding: 0.55rem 0;
+        padding: 0.55rem 0.75rem;
         font-size: 0.8rem;
+    }
+
+    .menu a:hover,
+    .menu a.active {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #ffffff !important;
     }
 
     /* Footer */
@@ -1108,6 +1117,11 @@ footer {
         max-width: 200px;
         margin: 0 auto;
     }
+
+    /* Models grid — colonna unica su tablet portrait */
+    .models-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ============================================================
@@ -1117,7 +1131,11 @@ footer {
 
     .logo-nome::before,
     .logo-nome::after {
-        width: 1cm;
+        width: 16px;
+    }
+
+    .intestazione {
+        padding: 5rem 5% 3rem;
     }
 
     .intestazione h1 {
@@ -1142,5 +1160,23 @@ footer {
 
     .filosofia-stats {
         padding: 1.5rem;
+    }
+
+    /* Card immagine più bassa su mobile */
+    .card-img-wrap {
+        height: 200px;
+    }
+
+    /* Footer padding ridotto */
+    footer {
+        padding: 3rem 5% 2rem;
+    }
+
+    /* Bottoni full width su mobile piccolo */
+    .btn-principale,
+    .btn-secondario {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
     }
 }
