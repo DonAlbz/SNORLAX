@@ -249,20 +249,20 @@ INSERT INTO
 VALUES
     (
         1,
-        'Hai sognato di volare sopra una città futuristica illuminata da luci blu e viola. Edifici altissimi con giardini pensili. Sensazione di libertà assoluta.',
+        'Hai sognato di volare sopra una citta futuristica illuminata da luci blu e viola. Edifici altissimi con giardini pensili. Sensazione di liberta assoluta.',
         'gioia',
         8
     ),
     (
         2,
         'Un labirinto infinito di specchi in cui ogni riflessione mostrava una versione diversa di te. Musica lontana guidava i tuoi passi verso una luce dorata.',
-        'curiosità',
+        'curiosita',
         6
     ),
     (
         3,
         'Oceano cristallino con creature bioluminescenti. Respiravi sott acqua senza difficoltà. Il fondale era fatto di cristalli viola che cantavano.',
-        'serenità',
+        'serenita',
         9
     ),
     (
