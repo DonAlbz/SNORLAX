@@ -299,6 +299,11 @@
     document.addEventListener('mousemove', function(e) {
         mouseX = e.clientX;
         mouseY = e.clientY;
+        // Sincronizza subito al primo movimento per evitare il "salto" dall'angolo
+        if (rlax.style.opacity === '0' || rlax.style.opacity === '') {
+            currentX = e.clientX;
+            currentY = e.clientY;
+        }
         rlax.style.opacity = "1";
     });
 
