@@ -32,7 +32,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
-<script src="/Aggiornato/js/footer.js"></script>
+<script src="./js/footer.js"></script>
 
 </body>
 
