@@ -5,7 +5,8 @@ $page_css = $page_css ?? [];
 $current_page = $current_page ?? '';
 $user = current_user();
 $flash = flash_get();
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang="<?= e(current_lang_code()) ?>">
 
 <head>
@@ -14,6 +15,9 @@ $flash = flash_get();
     <title><?= e($page_title) ?></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/app.css">
     <?php foreach ($page_css as $css): ?>
@@ -83,39 +87,6 @@ $flash = flash_get();
             </div>
         </nav>
     </header>
-
-    <script>
-    (function() {
-        document.querySelectorAll('.heart-click').forEach(function(link) {
-            link.addEventListener('click', function(e) {
-                var href = this.getAttribute('href');
-                if (!href || href.startsWith('#')) return;
-                e.preventDefault();
-                var overlay = document.createElement('div');
-                overlay.id = 'snorlax-heart-transition';
-                var hSvg = document.createElementNS('http://www.w3.org/2000/svg','svg');
-                hSvg.setAttribute('viewBox','0 0 100 100');
-                hSvg.style.cssText = 'width:80px;height:80px;display:block;transform:scale(0);transition:transform 0.6s cubic-bezier(0.22,1,0.36,1);';
-                var hPath = document.createElementNS('http://www.w3.org/2000/svg','path');
-                hPath.setAttribute('d','M50 85 C50 85 10 55 10 30 C10 18 18 10 30 10 C38 10 45 15 50 22 C55 15 62 10 70 10 C82 10 90 18 90 30 C90 55 50 85 50 85Z');
-                hPath.setAttribute('fill','#0a1628');
-                hSvg.appendChild(hPath);
-                overlay.appendChild(hSvg);
-                document.body.appendChild(overlay);
-                requestAnimationFrame(function(){
-                    requestAnimationFrame(function(){
-                        var scale = (Math.sqrt(window.innerWidth*window.innerWidth + window.innerHeight*window.innerHeight) / 80) * 2.5;
-                        hSvg.style.transform = 'scale(' + scale + ')';
-                        setTimeout(function(){
-                            overlay.style.background = '#0a1628';
-                            window.location.href = href;
-                        }, 550);
-                    });
-                });
-            });
-        });
-    })();
-    </script>
 
     <?php if ($flash): ?>
         <div class="container mt-4">

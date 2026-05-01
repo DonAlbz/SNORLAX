@@ -1,6 +1,6 @@
 <?php
 require_once 'config.php';
-$page_title = 'Snorlax - '.t('nav_home');
+$page_title = 'Snorlax - ' . t('nav_home');
 $current_page = 'home';
 include 'includes/header.php';
 ?>
@@ -35,12 +35,38 @@ include 'includes/header.php';
         <h2 class="filosofia-titolo"><?= e(t('philosophy_title')) ?> <em><?= e(t('philosophy_em')) ?></em><br><?= e(t('philosophy_title_2')) ?></h2>
         <p class="filosofia-desc"><?= e(t('philosophy_desc')) ?></p>
     </div>
-    <div class="filosofia-quote"><blockquote>"<?= e(t('quote')) ?>"</blockquote></div>
+    <div class="filosofia-quote">
+        <blockquote>"<?= e(t('quote')) ?>"</blockquote>
+    </div>
     <div class="features-grid">
-        <div class="feature-card"><div class="feature-icon-wrap"><i class="bi bi-heart-pulse"></i></div><div class="feature-num">01</div><h4><?= e(t('vital_monitoring')) ?></h4><p><?= e(t('vital_desc')) ?></p><div class="feature-tag"><?= e(t('bio_sensing')) ?></div></div>
-        <div class="feature-card"><div class="feature-icon-wrap"><i class="bi bi-clock"></i></div><div class="feature-num">02</div><h4><?= e(t('sleep_phases')) ?></h4><p><?= e(t('sleep_phases_desc')) ?></p><div class="feature-tag"><?= e(t('ai_integrated')) ?></div></div>
-        <div class="feature-card"><div class="feature-icon-wrap"><i class="bi bi-cloud-moon"></i></div><div class="feature-num">03</div><h4><?= e(t('dream_analysis')) ?></h4><p><?= e(t('dream_desc')) ?></p><div class="feature-tag"><?= e(t('dream_mapping')) ?></div></div>
-        <div class="feature-card"><div class="feature-icon-wrap"><i class="bi bi-grid-1x2"></i></div><div class="feature-num">04</div><h4><?= e(t('live_dashboard')) ?></h4><p><?= e(t('live_dashboard_desc')) ?></p><div class="feature-tag"><?= e(t('real_time')) ?></div></div>
+        <div class="feature-card">
+            <div class="feature-icon-wrap"><i class="bi bi-heart-pulse"></i></div>
+            <div class="feature-num">01</div>
+            <h4><?= e(t('vital_monitoring')) ?></h4>
+            <p><?= e(t('vital_desc')) ?></p>
+            <div class="feature-tag"><?= e(t('bio_sensing')) ?></div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon-wrap"><i class="bi bi-clock"></i></div>
+            <div class="feature-num">02</div>
+            <h4><?= e(t('sleep_phases')) ?></h4>
+            <p><?= e(t('sleep_phases_desc')) ?></p>
+            <div class="feature-tag"><?= e(t('ai_integrated')) ?></div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon-wrap"><i class="bi bi-cloud-moon"></i></div>
+            <div class="feature-num">03</div>
+            <h4><?= e(t('dream_analysis')) ?></h4>
+            <p><?= e(t('dream_desc')) ?></p>
+            <div class="feature-tag"><?= e(t('dream_mapping')) ?></div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon-wrap"><i class="bi bi-grid-1x2"></i></div>
+            <div class="feature-num">04</div>
+            <h4><?= e(t('live_dashboard')) ?></h4>
+            <p><?= e(t('live_dashboard_desc')) ?></p>
+            <div class="feature-tag"><?= e(t('real_time')) ?></div>
+        </div>
     </div>
     <div class="filosofia-stats">
         <div class="fstat"><span class="fstat-num">98<em>%</em></span><span class="fstat-label"><?= e(t('sensor_accuracy')) ?></span></div>
@@ -70,11 +96,34 @@ include 'includes/header.php';
     </div>
 </section>
 <section class="models-preview" id="preview-modelli">
-    <div class="models-preview-header"><span class="section-etichetta"><?= e(t('our_models')) ?></span><h2 class="section-titolo"><?= e(t('three_levels')) ?> <em><?= e(t('experience')) ?></em></h2></div>
+    <div class="models-preview-header"><span class="section-etichetta"><?= e(t('our_models')) ?></span>
+        <h2 class="section-titolo"><?= e(t('three_levels')) ?> <em><?= e(t('experience')) ?></em></h2>
+    </div>
     <div class="models-grid">
-        <a href="<?= e(url_with_lang('prodotti.php')) ?>#sense" class="model-card-preview"><div class="card-img-wrap" style="background-image:url('img/Sense.jpeg');"><span class="card-number">01 / Snorlax Sense</span></div><div class="card-content"><h3>Snorlax Sense</h3><p><?= e(t('sense_desc_short')) ?></p><div class="card-price">€1.200 <span>/ <?= e(t('base_model')) ?></span></div></div></a>
-        <a href="<?= e(url_with_lang('prodotti.php')) ?>#vision" class="model-card-preview"><div class="card-img-wrap" style="background-image:url('img/Vision.jpeg');"><span class="card-number">02 / Snorlax Vision</span></div><div class="card-content"><h3>Snorlax Vision</h3><p><?= e(t('vision_desc_short')) ?></p><div class="card-price">€1.500 <span>/ <?= e(t('with_monitor')) ?></span></div></div></a>
-        <a href="<?= e(url_with_lang('prodotti.php')) ?>#dream" class="model-card-preview"><div class="card-img-wrap" style="background-image:url('img/Dream.jpeg');"><span class="card-number">03 / Snorlax Dream</span></div><div class="card-content"><h3>Snorlax Dream</h3><p><?= e(t('dream_desc_short')) ?></p><div class="card-price">€2.200 <span>/ <?= e(t('full_solution')) ?></span></div></div></a>
+        <a href="<?= e(url_with_lang('prodotti.php')) ?>#sense" class="model-card-preview">
+            <div class="card-img-wrap" style="background-image:url('img/Sense.jpeg');"><span class="card-number">01 / Snorlax Sense</span></div>
+            <div class="card-content">
+                <h3>Snorlax Sense</h3>
+                <p><?= e(t('sense_desc_short')) ?></p>
+                <div class="card-price">€1.200 <span>/ <?= e(t('base_model')) ?></span></div>
+            </div>
+        </a>
+        <a href="<?= e(url_with_lang('prodotti.php')) ?>#vision" class="model-card-preview">
+            <div class="card-img-wrap" style="background-image:url('img/Vision.jpeg');"><span class="card-number">02 / Snorlax Vision</span></div>
+            <div class="card-content">
+                <h3>Snorlax Vision</h3>
+                <p><?= e(t('vision_desc_short')) ?></p>
+                <div class="card-price">€1.500 <span>/ <?= e(t('with_monitor')) ?></span></div>
+            </div>
+        </a>
+        <a href="<?= e(url_with_lang('prodotti.php')) ?>#dream" class="model-card-preview">
+            <div class="card-img-wrap" style="background-image:url('img/Dream.jpeg');"><span class="card-number">03 / Snorlax Dream</span></div>
+            <div class="card-content">
+                <h3>Snorlax Dream</h3>
+                <p><?= e(t('dream_desc_short')) ?></p>
+                <div class="card-price">€2.200 <span>/ <?= e(t('full_solution')) ?></span></div>
+            </div>
+        </a>
     </div>
     <div style="margin-top:3.5rem;"><a href="<?= e(url_with_lang('prodotti.php')) ?>" class="btn-secondario"><?= e(t('all_details')) ?></a></div>
 </section>

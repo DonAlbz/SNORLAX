@@ -34,29 +34,30 @@ $ai = $stmt->fetchAll();
 
 // --- Calcolo Statistiche ---
 $avgScore = $sonni ? round(array_sum(array_column($sonni, 'score_notte')) / count($sonni)) : 0;
-$avgHeart = 0; 
+$avgHeart = 0;
 $avgTemp = 0;
 
 if ($saluteRows) {
     $vals = array_filter(array_column($saluteRows, 'freq_cardiaca'), fn($v) => $v !== null);
     if ($vals) $avgHeart = round(array_sum($vals) / count($vals));
-    
+
     $temps = array_filter(array_column($saluteRows, 'temp_corporea'), fn($v) => $v !== null);
     if ($temps) $avgTemp = round(array_sum($temps) / count($temps), 1);
 }
 
 // Helper per i badge
-function badge_server(string $stato): string { 
-    return match (strtolower($stato)) { 
-        'online'       => 'badge-soft badge-ok', 
-        'manutenzione' => 'badge-soft badge-warn', 
+function badge_server(string $stato): string
+{
+    return match (strtolower($stato)) {
+        'online'       => 'badge-soft badge-ok',
+        'manutenzione' => 'badge-soft badge-warn',
         default        => 'badge-soft badge-danger',
-    }; 
+    };
 }
 
-$page_title = 'Snorlax - ' . t('nav_dashboard'); 
-$current_page = 'dashboard'; 
-include 'includes/header.php'; 
+$page_title = 'Snorlax - ' . t('nav_dashboard');
+$current_page = 'dashboard';
+include 'includes/header.php';
 ?>
 
 <main class="dashboard-page">
@@ -90,17 +91,23 @@ include 'includes/header.php';
             <h3><?= e(t('latest_nights')) ?></h3>
             <table class="table-lite">
                 <thead>
-                    <tr><th><?= e(t('start')) ?></th><th><?= e(t('end')) ?></th><th>REM</th><th><?= e(t('deep')) ?></th><th><?= e(t('score')) ?></th></tr>
+                    <tr>
+                        <th><?= e(t('start')) ?></th>
+                        <th><?= e(t('end')) ?></th>
+                        <th>REM</th>
+                        <th><?= e(t('deep')) ?></th>
+                        <th><?= e(t('score')) ?></th>
+                    </tr>
                 </thead>
                 <tbody>
-                    <?php foreach($sonni as $row): ?>
-                    <tr>
-                        <td><?= e((string)$row['ora_inizio']) ?></td>
-                        <td><?= e((string)$row['ora_fine']) ?></td>
-                        <td><?= e((string)$row['fase_rem']) ?> min</td>
-                        <td><?= e((string)$row['fase_deep']) ?> min</td>
-                        <td><?= e((string)$row['score_notte']) ?>%</td>
-                    </tr>
+                    <?php foreach ($sonni as $row): ?>
+                        <tr>
+                            <td><?= e((string)$row['ora_inizio']) ?></td>
+                            <td><?= e((string)$row['ora_fine']) ?></td>
+                            <td><?= e((string)$row['fase_rem']) ?> min</td>
+                            <td><?= e((string)$row['fase_deep']) ?> min</td>
+                            <td><?= e((string)$row['score_notte']) ?>%</td>
+                        </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
@@ -110,16 +117,21 @@ include 'includes/header.php';
             <h3><?= e(t('health_status')) ?></h3>
             <table class="table-lite">
                 <thead>
-                    <tr><th><?= e(t('date')) ?></th><th>BPM</th><th>Temp.</th><th><?= e(t('quality')) ?></th></tr>
+                    <tr>
+                        <th><?= e(t('date')) ?></th>
+                        <th>BPM</th>
+                        <th>Temp.</th>
+                        <th><?= e(t('quality')) ?></th>
+                    </tr>
                 </thead>
                 <tbody>
-                    <?php foreach($saluteRows as $row): ?>
-                    <tr>
-                        <td><?= e((string)$row['data_rilevazione']) ?></td>
-                        <td><?= e((string)$row['freq_cardiaca']) ?></td>
-                        <td><?= e((string)$row['temp_corporea']) ?>°</td>
-                        <td><?= e((string)$row['qualita_sonno']) ?>/10</td>
-                    </tr>
+                    <?php foreach ($saluteRows as $row): ?>
+                        <tr>
+                            <td><?= e((string)$row['data_rilevazione']) ?></td>
+                            <td><?= e((string)$row['freq_cardiaca']) ?></td>
+                            <td><?= e((string)$row['temp_corporea']) ?>°</td>
+                            <td><?= e((string)$row['qualita_sonno']) ?>/10</td>
+                        </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
@@ -127,27 +139,27 @@ include 'includes/header.php';
 
         <div class="panel-card span-8">
             <h3><?= e(t('detected_dreams')) ?></h3>
-            <?php foreach($sogni as $row): ?>
-            <div class="mb-4">
-                <div class="d-flex align-items-center gap-2 mb-2">
-                    <span class="badge-soft"><?= e((string)$row['emozione_rilevata']) ?></span>
-                    <span class="text-secondary"><?= e(t('intensity')) ?> <?= e((string)$row['intensita']) ?>/10</span>
+            <?php foreach ($sogni as $row): ?>
+                <div class="mb-4">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                        <span class="badge-soft"><?= e((string)$row['emozione_rilevata']) ?></span>
+                        <span class="text-secondary"><?= e(t('intensity')) ?> <?= e((string)$row['intensita']) ?>/10</span>
+                    </div>
+                    <p class="mb-1"><?= e((string)$row['descrizione_ai']) ?></p>
+                    <small class="text-secondary"><?= e((string)$row['data_registrazione']) ?></small>
                 </div>
-                <p class="mb-1"><?= e((string)$row['descrizione_ai']) ?></p>
-                <small class="text-secondary"><?= e((string)$row['data_registrazione']) ?></small>
-            </div>
             <?php endforeach; ?>
         </div>
 
         <div class="panel-card span-4">
             <h3><?= e(t('servers')) ?></h3>
-            <?php foreach($servers as $row): ?>
-            <div class="mb-3">
-                <div class="d-flex justify-content-between align-items-center">
-                    <strong><?= e((string)$row['nome_server']) ?></strong>
-                    <span class="<?= badge_server((string)$row['stato']) ?>"><?= e((string)$row['stato']) ?></span>
+            <?php foreach ($servers as $row): ?>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <strong><?= e((string)$row['nome_server']) ?></strong>
+                        <span class="<?= badge_server((string)$row['stato']) ?>"><?= e((string)$row['stato']) ?></span>
+                    </div>
                 </div>
-            </div>
             <?php endforeach; ?>
         </div>
 
@@ -155,14 +167,17 @@ include 'includes/header.php';
             <h3><?= e(t('recent_media')) ?></h3>
             <table class="table-lite">
                 <thead>
-                    <tr><th><?= e(t('type')) ?></th><th><?= e(t('title')) ?></th></tr>
+                    <tr>
+                        <th><?= e(t('type')) ?></th>
+                        <th><?= e(t('title')) ?></th>
+                    </tr>
                 </thead>
                 <tbody>
-                    <?php foreach($media as $row): ?>
-                    <tr>
-                        <td><?= e((string)$row['tipo']) ?></td>
-                        <td><?= e((string)$row['titolo']) ?></td>
-                    </tr>
+                    <?php foreach ($media as $row): ?>
+                        <tr>
+                            <td><?= e((string)$row['tipo']) ?></td>
+                            <td><?= e((string)$row['titolo']) ?></td>
+                        </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
@@ -170,7 +185,7 @@ include 'includes/header.php';
 
         <div class="panel-card span-8">
             <h3><?= e(t('ai_analysis')) ?></h3>
-            <?php foreach($ai as $row): ?>
+            <?php foreach ($ai as $row): ?>
                 <?php $aiData = json_decode((string)$row['risultato_json'], true) ?? []; ?>
                 <div class="mb-4">
                     <div class="d-flex justify-content-between">

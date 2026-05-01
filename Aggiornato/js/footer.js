@@ -3,11 +3,6 @@
     if (sessionStorage.getItem('snorlax-loaded')) return;
     sessionStorage.setItem('snorlax-loaded', '1');
 
-    var fontLink = document.createElement('link');
-    fontLink.rel = 'stylesheet';
-    fontLink.href = 'https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap';
-    document.head.appendChild(fontLink);
-
     var style = document.createElement('style');
     style.textContent = [
         '#snorlax-loader{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(ellipse at center,#ffffff 0%,#eaf6ff 50%,#c8e4f5 100%);overflow:hidden;}',
@@ -138,9 +133,9 @@
             {
                 opacity: function () { return 0.28 + Math.random() * 0.32; },
                 y: -28, scale: 1.08,
-                duration: function () { return 2.8 + Math.random() * 2.4; },
+                duration: function () { return 1.2 + Math.random() * 0.8; },
                 ease: 'sine.inOut',
-                stagger: { each: 0.18, from: 'random' },
+                stagger: { each: 0.06, from: 'random' },
                 yoyo: true, repeat: -1
             }
         );
@@ -260,11 +255,20 @@
 
     var moveX = gsap.quickTo(rlax, 'x', { duration: 0.5, ease: 'power2.out' });
     var moveY = gsap.quickTo(rlax, 'y', { duration: 0.5, ease: 'power2.out' });
+    var initialized = false;
 
     document.addEventListener('mousemove', function (e) {
-        moveX(e.clientX + 12);
-        moveY(e.clientY + 12);
-        rlax.style.opacity = '1';
+        if (!initialized) {
+            gsap.set(rlax, { x: e.clientX + 12, y: e.clientY + 12 });
+            initialized = true;
+            requestAnimationFrame(function () {
+                rlax.style.transition = 'opacity 0.3s ease-in-out';
+                rlax.style.opacity = '1';
+            });
+        } else {
+            moveX(e.clientX + 12);
+            moveY(e.clientY + 12);
+        }
     });
 })();
 
@@ -356,7 +360,7 @@
 
 // ── 6. Transizione Cuore per Navigazione (Implementato con libreria GSAP)
 (function () {
-    document.querySelectorAll('footer a').forEach(function (link) {
+    document.querySelectorAll('footer a, .heart-click').forEach(function (link) {
         link.addEventListener('click', function (e) {
             var href = this.getAttribute('href');
             if (!href || href.startsWith('#') || href.includes(window.location.pathname + '#')) return;
