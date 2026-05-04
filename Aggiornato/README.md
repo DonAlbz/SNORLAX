@@ -120,7 +120,7 @@ Demo login credentials
 
 Use these to log in and try the website:
 - **Email:** warna@snorlax.it
-- **Password:** password123
+- **Password:** password
 
 Quick checklist
 - [ ] Copy the Snorlax folder into `htdocs`
